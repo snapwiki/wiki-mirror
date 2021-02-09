@@ -23,4 +23,6 @@ jobs:
         python -m pip install --upgrade pip
     - name: Mass create
       run: |
+        mv config-default.py configuration.py
+        pip3 install requests mw-api-client
         python3 masshtml.py
