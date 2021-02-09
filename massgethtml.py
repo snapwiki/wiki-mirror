@@ -20,7 +20,7 @@ for page in pages:
         restfilepath = REST_ENDPOINT_URL + page.title
         print(restfilepath)
         print(filename1)
-        filename.write(get(restfilepath).text)
+        filename.write(get(restfilepath).text.replace('</body>', '<script src="https://scratchblocks.github.io/js/scratchblocks-v3.5-min.js"></script><script>scratchblocks.renderMatching(`.blocks`, {});</script></body>'))
         filename.close()
 
     except:
