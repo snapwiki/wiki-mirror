@@ -5,6 +5,7 @@ name: Python application
 on:
   schedule:
     - cron: 0 0 * * *
+  workflow_dispatch:
   
 jobs:
   build:
@@ -22,4 +23,9 @@ jobs:
         python -m pip install --upgrade pip
     - name: Mass create
       run: |
-        python3 masshtml.py
+        mv config-default.py configuration.py
+        pip3 install requests mw-api-client
+        python3 massgethtml.py
+        mv configuration.py config-default.py 
+    - uses: stefanzweifel/git-auto-commit-action@v4
+
