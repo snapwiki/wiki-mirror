@@ -25,4 +25,6 @@ jobs:
       run: |
         mv config-default.py configuration.py
         pip3 install requests mw-api-client
-        python3 masshtml.py
+        python3 massgethtml.py
+    - uses: stefanzweifel/git-auto-commit-action@v4
+
