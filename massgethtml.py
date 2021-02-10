@@ -5,11 +5,13 @@ import os
 
 wiki = Wiki('https://snapwiki.miraheze.org/w/api.php', 'Snap! Wiki Scrapper/1.0.0')
 pages = wiki.allpages()
-
+indexa = '<html><head></head><body><ul>'
+indexb = '</ul></body></html>'
+indexslot = ''
 for page in pages:
-
-    filename1 = SCRAP_DIR + page.title
     try:
+        indexslot += '<li><a href="' + page.title + '.html">' + page.title + '</a></li>'
+        filename1 = SCRAP_DIR + page.title
         if filename1.count('/') > 1:
             for dir in filename1.split('/'):
                 if not dir == '/':
@@ -22,7 +24,9 @@ for page in pages:
         print(filename1)
         filename.write(get(restfilepath).text.replace('</body>', '<script src="https://scratchblocks.github.io/js/scratchblocks-v3.5-min.js"></script><script>scratchblocks.renderMatching(`.blocks`, {});</script></body>'))
         filename.close()
+    except Exception as err:
+        print("An exception occurred" + str(err))
 
-    except:
-        print("An exception occurred")
-
+index = open(SCRAP_DIR + '/index.html', 'w', encoding='utf-8')
+index.write(indexa + indexslot + indexb)
+index.close()
