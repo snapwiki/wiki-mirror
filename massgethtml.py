@@ -21,7 +21,6 @@ for page in pages:
                         os.mkdir(path)
         filename = open(filename1 + '.html', 'w', encoding='utf-8')
         restfilepath = REST_ENDPOINT_URL + page.title
-        print(restfilepath)
         print(filename1)
         filename.write(get(restfilepath).text.replace('</body>', '<script src="https://scratchblocks.github.io/js/scratchblocks-v3.5-min.js"></script><script>scratchblocks.renderMatching(`.blocks`, {});</script></body>'))
         filename.close()
