@@ -1,0 +1,3 @@
+requests
+mw_api_client
+minify_html
