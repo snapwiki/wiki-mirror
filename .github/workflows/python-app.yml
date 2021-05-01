@@ -26,6 +26,6 @@ jobs:
         mv config-default.py configuration.py
         pip3 install -r requirements.txt
         python3 massgethtml.py
-        mv configuration.py config-default.py 
-    - uses: stefanzweifel/git-auto-commit-action@v4
+        mv configuration.py config-default.py
+        git commit -a -m "Sync all articles with the wiki"
 
