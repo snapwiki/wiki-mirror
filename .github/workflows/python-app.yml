@@ -23,10 +23,8 @@ jobs:
         python -m pip install --upgrade pip
     - name: Mass create
       run: |
-        mv config-default.py configuration.py
         pip3 install -r requirements.txt
         python3 massgethtml.py
-        mv configuration.py config-default.py
 
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
