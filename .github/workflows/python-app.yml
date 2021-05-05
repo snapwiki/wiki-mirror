@@ -23,7 +23,11 @@ jobs:
         python -m pip install --upgrade pip
     - name: Mass create
       run: |
-        pip3 install requests mw-api-client
+        pip3 install -r requirements.txt
         python3 massgethtml.py
-    - uses: stefanzweifel/git-auto-commit-action@v4
 
+
+    - uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: "Sync all articles with the wiki"
+        
