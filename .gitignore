@@ -1,1 +1,4 @@
+# Byte-compiled stuff
 __pycache__
+# Editor configuration file(s)
+.vscode
