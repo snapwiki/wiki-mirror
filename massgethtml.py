@@ -1,7 +1,7 @@
-from requests import get
-from configuration import REST_ENDPOINT_URL, SCRAP_DIR, API_URL, USERAGENT, INDEX_HEAD, INDEX_BODY
-from mw_api_client import Wiki
 import os
+from requests import get
+from mw_api_client import Wiki
+from configuration import REST_ENDPOINT_URL, SCRAP_DIR, API_URL, USERAGENT, INDEX_HEAD, INDEX_BODY
 
 wiki = Wiki(API_URL, USERAGENT)
 pages = wiki.allpages()
@@ -12,9 +12,9 @@ for page in pages:
         indexslot += generatedslot
         filename1 = SCRAP_DIR + page.title
         if filename1.count('/') > 1:
-            for dir in filename1.split('/'):
-                if not dir == '/':
-                    path = SCRAP_DIR + dir
+            for directory in filename1.split('/'):
+                if not directory == '/':
+                    path = SCRAP_DIR + directory
                     if not os.path.isdir(path):
                         os.mkdir(path)
         filename = open(filename1 + '.html', 'w', encoding='utf-8')
