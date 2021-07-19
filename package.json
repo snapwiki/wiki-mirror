@@ -1,0 +1,22 @@
+{
+  "name": "snapwiki-mirror",
+  "version": "1.0.0",
+  "description": "A read-only mirror of the Snap! Wiki",
+  "scripts": {
+    "minify": "minhtml --collapse-whitespace --remove-comments --input-dir ./docs --output-dir ./docs --file-ext html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snapwiki/wiki-mirror.git"
+  },
+  "author": "R4356th and GrahamSH",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/snapwiki/wiki-mirror/issues"
+  },
+  "homepage": "https://github.com/snapwiki/wiki-mirror#readme",
+  "dependencies": {
+    "minhtml": "^0.4.0"
+  },
+  "private": true
+}

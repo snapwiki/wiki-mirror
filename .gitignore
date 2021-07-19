@@ -1,4 +1,8 @@
 # Byte-compiled stuff
 __pycache__
+
 # Editor configuration file(s)
 .vscode
+
+# NPM Packages
+node_modules

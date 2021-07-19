@@ -29,6 +29,11 @@ python3 massgethtml.py
 ```Bash
 python3 gethtml.py
 ```
+. If you want to minify the scraped pages, run the following commands-
+```Bash
+npm install
+npm run minify
+```
 .
 
 ## Legal
