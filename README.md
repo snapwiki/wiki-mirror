@@ -1,3 +1,4 @@
+[![Continous Integration](https://github.com/snapwiki/wiki-mirror/actions/workflows/lint.yml/badge.svg)](https://github.com/snapwiki/wiki-mirror/actions/workflows/lint.yml)
 # Snap<i>!</i> Wiki Mirror
 A read-only mirror of the Snap<i>!</i> Wiki
 
