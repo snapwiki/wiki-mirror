@@ -1,4 +1,4 @@
 mw-api-client==3.2.1
 requests==2.26.0
-pylint==2.9.5
+pylint==2.9.6
 wheel
