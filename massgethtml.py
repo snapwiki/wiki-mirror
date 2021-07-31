@@ -20,7 +20,7 @@ for page in pages:
                             os.mkdir(path)
             filename = open(filename1 + '.html', 'w', encoding='utf-8')
             restfilepath = REST_ENDPOINT_URL + page.title
-            filename.write(get(restfilepath).text.replace('</body>', '<script src="https://scratchblocks.github.io/js/scratchblocks-v3.5-min.js"></script><script>scratchblocks.renderMatching(`.blocks`, {});</script></body>'))
+            filename.write(get(restfilepath).text.replace('</body>', '<script src="https://scratchblocks.github.io/js/scratchblocks-v3.5.2-min.js"></script><script>scratchblocks.renderMatching(`.blocks`, {});</script></body>'))
             filename.close()
         except Exception as err:
             print("An exception occurred" + str(err))
