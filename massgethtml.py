@@ -1,7 +1,7 @@
 import os
 from requests import get
 from mw_api_client import Wiki
-from configuration import REST_ENDPOINT_URL, SCRAP_DIR, API_URL, USERAGENT, INDEX_HEAD, INDEX_BODY
+from configuration import WIKI_ARTICLE_PATH, SCRAP_DIR, API_URL, USERAGENT, INDEX_HEAD, INDEX_BODY
 
 wiki = Wiki(API_URL, USERAGENT)
 pages = wiki.allpages()
@@ -19,8 +19,8 @@ for page in pages:
                         if not os.path.isdir(path):
                             os.mkdir(path)
             filename = open(filename1 + '.html', 'w', encoding='utf-8')
-            restfilepath = REST_ENDPOINT_URL + page.title
-            filename.write(get(restfilepath).text.replace('</body>', '<script src="https://scratchblocks.github.io/js/scratchblocks-v3.5-min.js"></script><script>scratchblocks.renderMatching(`.blocks`, {});</script></body>'))
+            articleurl = WIKI_ARTICLE_PATH + page.title + '?action=render'
+            filename.write(get(articleurl).text.replace('</body>', '<script src="https://scratchblocks.github.io/js/scratchblocks-v3.5-min.js"></script><script>scratchblocks.renderMatching(`.blocks`, {});</script></body>'))
             filename.close()
         except Exception as err:
             print("An exception occurred" + str(err))
