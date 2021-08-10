@@ -16,7 +16,7 @@ for page in pages:
                 if not directory == '/':
                     path = SCRAP_DIR + directory
                     if not os.path.isdir(path):
-                       os.mkdir(path)
+                        os.mkdir(path)
         filename = open(filename1 + '.html', 'w', encoding='utf-8')
         articleurl = WIKI_ARTICLE_PATH + page.title + '?action=render'
         filename.write(get(articleurl).text.replace('</body>', '<script src="https://scratchblocks.github.io/js/scratchblocks-v3.5.2-min.js"></script><script>scratchblocks.renderMatching(`.blocks`, {});</script></body>'))
