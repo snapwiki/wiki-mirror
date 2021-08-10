@@ -21,7 +21,7 @@ for page in pages:
         articleurl = WIKI_ARTICLE_PATH + page.title + '?action=render'
         filename.write(get(articleurl).text.replace('</body>', '<script src="https://scratchblocks.github.io/js/scratchblocks-v3.5.2-min.js"></script><script>scratchblocks.renderMatching(`.blocks`, {});</script></body>'))
         filename.close()
-     except Exception as err:
+    except Exception as err:
         print("An exception occurred" + str(err))
 
 index = open(SCRAP_DIR + '/index.html', 'w', encoding='utf-8')
