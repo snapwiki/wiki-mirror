@@ -1,4 +1,4 @@
-WIKI_ARTICLE_PATH = 'https://snapwiki.miraheze.org/w/rest.php/snapwiki.miraheze.org/v3/page/html/'
+WIKI_ARTICLE_PATH = 'https://snapwiki.miraheze.org/wiki/'
 SCRAP_DIR = 'docs/'
 API_URL= 'https://snapwiki.miraheze.org/w/api.php'
 USERAGENT = 'Snap! Wiki Scrapper/1.0.0'
