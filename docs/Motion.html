@@ -1,33 +1,15 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Backend Fetch Failed"><title>503 Backend fetch failed</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"><style>/* Error Page Inline Styles */
-				body {
-					padding-top: 20px;
-				}
-				/* Layout */
-				.jumbotron {
-					font-size: 21px;
-					font-weight: 200;
-					line-height: 2.1428571435;
-					color: inherit;
-					padding: 10px 0px;
-				}
-				/* Everything but the jumbotron gets side spacing for mobile-first views */
-				.masthead, .body-content {
-					padding-left: 15px;
-					padding-right: 15px;
-				}
-				/* Main marketing message and sign up button */
-				.jumbotron {
-					text-align: center;
-					background-color: transparent;
-				}
-				.jumbotron .btn {
-					font-size: 21px;
-					padding: 14px 24px;
-				}
-				/* Colors */
-				.green {color:#5cb85c;}
-				.orange {color:#f0ad4e;}
-				.red {color:#d9534f;}</style><script>function loadDomain() {
-					var display = document.getElementById("display-domain");
-					display.innerHTML = document.domain;
-				}</script></head><div class="container"><div class="jumbotron"><h1><img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Miraheze-Logo.svg" alt="Miraheze Logo"> 503 Backend fetch failed</h1><p class="lead">Our servers are having issues at the moment.</p><a href="javascript:document.location.reload(true);" class="btn btn-lg btn-outline-success" role="button">Try this page again</a></div></div><div class="container"><div class="body-content"><div class="row"><div class="col-md-6"><h2>What can I do?</h2><p class="lead">If you're a wiki visitor or owner</p><p>Try again in a few minutes. If the problem persists, please report this on <a href="https://phabricator.miraheze.org">phabricator.</a> We apologize for the inconvenience. Our sysadmins should be attempting to solve the issue ASAP!</p></div><div class="col-md-6"><a class="twitter-timeline" data-width="500" data-height="350" text-align: center href="https://twitter.com/miraheze?ref_src=twsrc%5Etfw">Tweets by miraheze</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div></div></div></div><div class="footer"><div class="text-center"><p class="lead">When reporting this, please be sure to provide the information below.</p>Error 503 Backend fetch failed, forwarded for 104.214.48.208, 127.0.0.1<br>(Varnish XID 8454185) via cp30.miraheze.org at Thu, 16 Dec 2021 00:24:25 GMT.<br><br></div></div></html>
+<div class="mw-parser-output"><p><b>Motion</b> is the first category of blocks, and it carries over 13 commands, and 3 reporters. These blocks are used for <a href="https://snapwiki.miraheze.org/wiki/Movement_%26_Direction" title="Movement &amp; Direction">sprite movement</a>.</p><table class="wikitable"><tbody><tr><th>Block</th><th>Function</th><th>Options</th></tr><tr><td><i><big><a href="https://snapwiki.miraheze.org/wiki/Blocks_Types" class="mw-redirect" title="Blocks Types">Commands</a> (13)</big></i></td><td></td><td></td></tr><tr><td><code class="blocks">move (10) steps</code></td><td>Moves the sprite forward (or backward) from the direction the sprite is at.</td></tr><tr><td><pre class="blocks">turn cw (15) degrees&#160;:: motion
+
+turn ccw (15) degrees&#160;:: motion
+</pre></td><td>Turns the sprite left or right by a certain amount of degrees.</td></tr><tr><td><code class="blocks">point in direction (90 v)&#160;:: motion</code></td><td>Sets the sprite's direction.</td><td><ul><li><b>Random</b>: Picks a random angle <small>(number from 0 to 359)</small>.</li></ul></td></tr><tr><td><code class="blocks">point towards [ v]</code></td><td>Makes the sprite point toward something.</td><td><ul><li><b>Random Position</b>: Points at a random position.</li><li><b>Mouse Pointer</b>: Points at the mouse pointer.</li><li><b>Center</b>: Points at the center <sup>(0, 0)</sup>.</li></ul></td></tr><tr><td><pre class="blocks">go to x: (0) y: (0)&#160;:: motion
+
+set x to (0)&#160;:: motion
+
+set y to (0)&#160;:: motion
+</pre></td><td>Sets the sprites position (x, y).</td></tr><tr><td><code class="blocks">go to [ v]&#160;:: motion</code></td><td>Makes the sprite go to the position of something.</td><td><ul><li><b>Random Position</b>: Goes to a random position.</li><li><b>Mouse Pointer</b>: Goes to the mouse pointer.</li><li><b>Center</b>: Goes to the center <sup>(0, 0)</sup>.</li></ul></td></tr><tr><td><code class="blocks">glide (1) secs to x: (0) y: (0)&#160;:: motion</code></td><td>"Glides" the sprite to the position, or go to the position smoothly. The higher amount of seconds makes the sprite go slower.</td></tr><tr><td><pre class="blocks">change x by (10)&#160;:: motion
+
+change y by (10)&#160;:: motion
+</pre></td><td>Changes the x or y of the sprite's position.</td></tr><tr><td><code class="blocks">if on edge, bounce&#160;:: motion</code></td><td>Flips/mirrors the sprite when the it's touching the edge (out of bounds).</td></tr><tr><td><i><big><a href="https://snapwiki.miraheze.org/wiki/Blocks_Types" class="mw-redirect" title="Blocks Types">Reporters and Predicates</a> (3)</big></i></td><td></td><td></td></tr><tr><td><pre class="blocks">x position&#160;:: reporter motion
+y position&#160;:: reporter motion
+direction&#160;:: reporter motion
+</pre></td><td>Returns the sprite's positions or direction.</td></tr></tbody></table></div>
