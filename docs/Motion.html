@@ -1,1 +1,15 @@
-<html><head><title>502 Bad Gateway</title></head><body><center><h1>502 Bad Gateway</h1></center><hr><center>nginx</center><script src="https://scratchblocks.github.io/js/scratchblocks-v3.5.2-min.js"></script><script>scratchblocks.renderMatching(`.blocks`, {});</script></body></html>
+<div class="mw-parser-output"><p><b>Motion</b> is the first category of blocks, and it carries over 13 commands, and 3 reporters. These blocks are used for <a href="https://snapwiki.miraheze.org/wiki/Movement_%26_Direction" title="Movement &amp; Direction">sprite movement</a>.</p><table class="wikitable"><tbody><tr><th>Block</th><th>Function</th><th>Options</th></tr><tr><td><i><big><a href="https://snapwiki.miraheze.org/wiki/Blocks_Types" class="mw-redirect" title="Blocks Types">Commands</a> (13)</big></i></td><td></td><td></td></tr><tr><td><code class="blocks">move (10) steps</code></td><td>Moves the sprite forward (or backward) from the direction the sprite is at.</td></tr><tr><td><pre class="blocks">turn cw (15) degrees&#160;:: motion
+
+turn ccw (15) degrees&#160;:: motion
+</pre></td><td>Turns the sprite left or right by a certain amount of degrees.</td></tr><tr><td><code class="blocks">point in direction (90 v)&#160;:: motion</code></td><td>Sets the sprite's direction.</td><td><ul><li><b>Random</b>: Picks a random angle <small>(number from 0 to 359)</small>.</li></ul></td></tr><tr><td><code class="blocks">point towards [ v]</code></td><td>Makes the sprite point toward something.</td><td><ul><li><b>Random Position</b>: Points at a random position.</li><li><b>Mouse Pointer</b>: Points at the mouse pointer.</li><li><b>Center</b>: Points at the center <sup>(0, 0)</sup>.</li></ul></td></tr><tr><td><pre class="blocks">go to x: (0) y: (0)&#160;:: motion
+
+set x to (0)&#160;:: motion
+
+set y to (0)&#160;:: motion
+</pre></td><td>Sets the sprites position (x, y).</td></tr><tr><td><code class="blocks">go to [ v]&#160;:: motion</code></td><td>Makes the sprite go to the position of something.</td><td><ul><li><b>Random Position</b>: Goes to a random position.</li><li><b>Mouse Pointer</b>: Goes to the mouse pointer.</li><li><b>Center</b>: Goes to the center <sup>(0, 0)</sup>.</li></ul></td></tr><tr><td><code class="blocks">glide (1) secs to x: (0) y: (0)&#160;:: motion</code></td><td>"Glides" the sprite to the position, or go to the position smoothly. The higher amount of seconds makes the sprite go slower.</td></tr><tr><td><pre class="blocks">change x by (10)&#160;:: motion
+
+change y by (10)&#160;:: motion
+</pre></td><td>Changes the x or y of the sprite's position.</td></tr><tr><td><code class="blocks">if on edge, bounce&#160;:: motion</code></td><td>Flips/mirrors the sprite when the it's touching the edge (out of bounds).</td></tr><tr><td><i><big><a href="https://snapwiki.miraheze.org/wiki/Blocks_Types" class="mw-redirect" title="Blocks Types">Reporters and Predicates</a> (3)</big></i></td><td></td><td></td></tr><tr><td><pre class="blocks">x position&#160;:: reporter motion
+y position&#160;:: reporter motion
+direction&#160;:: reporter motion
+</pre></td><td>Returns the sprite's positions or direction.</td></tr></tbody></table></div>
