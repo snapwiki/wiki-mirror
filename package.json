@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/snapwiki/wiki-mirror#readme",
   "dependencies": {
-    "minhtml": "^0.4.0"
+    "minhtml": "^1.1.1"
   },
   "private": true
 }
