@@ -40,7 +40,7 @@ npm run minify
 ## Legal
 Snap! Wiki Mirror - A read-only mirror of the Snap<i>!</i> Wiki
 
-Copyright (C) 2021 GrahamSH and R4356th
+Copyright (C) 2021-2023 GrahamSH and R4356th
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
