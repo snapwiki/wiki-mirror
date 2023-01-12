@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A read-only mirror of the Snap! Wiki",
   "scripts": {
-    "minify": "minhtml --collapse-whitespace --remove-comments --input-dir ./docs --output-dir ./docs --file-ext html"
+    "minify": "html-minifier-terser --collapse-whitespace --remove-comments --input-dir ./docs --output-dir ./docs --file-ext html"
   },
   "repository": {
     "type": "git",
@@ -15,8 +15,8 @@
     "url": "https://github.com/snapwiki/wiki-mirror/issues"
   },
   "homepage": "https://github.com/snapwiki/wiki-mirror#readme",
+  "private": true,
   "dependencies": {
-    "minhtml": "^1.1.1"
-  },
-  "private": true
+    "html-minifier-terser": "^7.1.0"
+  }
 }
