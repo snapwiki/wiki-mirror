@@ -17,6 +17,6 @@
   "homepage": "https://github.com/snapwiki/wiki-mirror#readme",
   "private": true,
   "dependencies": {
-    "html-minifier-terser": "^7.1.0"
+    "html-minifier-terser": "^7.2.0"
   }
 }
