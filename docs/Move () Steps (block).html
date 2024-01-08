@@ -1,0 +1,9 @@
+<div class="mw-parser-output"><p>The <code class="blocks">move (10) steps</code> block is a <a href="https://snapwiki.miraheze.org/wiki/Blocks" title="Blocks">block</a> in the <a href="https://snapwiki.miraheze.org/wiki/Motion" title="Motion">Motion</a> category that moves the sprite in the <a href="https://snapwiki.miraheze.org/wiki/Direction_(block)?action=edit&amp;redlink=1" class="new" title="Direction (block) (page does not exist)">direction</a> it is facing.</p><h2><span class="mw-headline" id="Examples">Examples</span></h2><p>Making <a href="https://snapwiki.miraheze.org/wiki/Sprite?action=edit&amp;redlink=1" class="new" title="Sprite (page does not exist)">sprites</a> follow each other or the mouse pointer:</p><pre class="blocks-2">when green flag clicked&nbsp;:: control
+forever&nbsp;:: control
+point towards [mouse-pointer v]&nbsp;:: motion
+move (10) steps&nbsp;:: motion
+</pre><p>Moving in a circle:</p><pre class="blocks-2">when green flag clicked&nbsp;:: control
+forever&nbsp;:: control
+turn cw (15) degrees&nbsp;:: motion
+move (10) steps&nbsp;:: motion
+</pre><h2><span class="mw-headline" id="Workaround">Workaround</span></h2><p>If you do not want to use the <code class="blocks">move (10) steps</code> block, then you can use trigonometry to calculate the x- and y-distances: <code class="blocks">go to ((position&nbsp;:: motion) + ((list ([sin v] of (direction)) ([cos v] of (direction)) @delInput @addInput&nbsp;:: lists) * (steps) @delInput⋮@addInput&nbsp;:: operators) @delInput⋮@addInput&nbsp;:: operators)</code></p></div>
