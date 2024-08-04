@@ -19,7 +19,7 @@ for page in pages:
                         os.mkdir(path)
         filename = open(filename1 + '.html', 'w', encoding='utf-8')
         articleurl = WIKI_ARTICLE_PATH + page.title + '?action=render'
-        filename.write(get(articleurl).text.replace('</body>', '<script src="https://scratchblocks.github.io/js/scratchblocks-v3.6.1-min.js"></script><script>scratchblocks.renderMatching(`.blocks`, {});</script></body>'))
+        filename.write(get(articleurl).text.replace('</div>', '<script src="https://snap-blocks.github.io/js/snapblocks.min.js"></script><script>snapblocks.renderMatching(`.blocks`, {});</script></div>'))
         filename.close()
     except Exception as err:
         print("An exception occurred" + str(err))
