@@ -1,14 +1,1 @@
-<div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><p><b>clear graphic effects</b> is a <a href="https://snapwiki.miraheze.org/wiki/Command" class="mw-redirect" title="Command">command</a> block and a <a href="https://snapwiki.miraheze.org/wiki/Looks" title="Looks">looks</a> block. It reverts all the <a href="https://snapwiki.miraheze.org/wiki/Graphic_Effect" title="Graphic Effect">graphic effects</a> amounts to 0.</p><pre class="blocks">clear graphic effects::looks
-</pre><h2><span class="mw-headline" id="Workarounds">Workarounds</span></h2><p>One of the workarounds is to revert each effect manually, but this is slow and time-consuming to build the script.</p><pre class="blocks">set [color v] effect to (0)
-set [saturation v] effect to (0)
-set [brightness v] effect to (0)
-set [ghost v] effect to (0)
-set [fisheye v] effect to (0)
-set [whirl v] effect to (0)
-set [pixelate v] effect to (0)
-set [mosaic v] effect to (0)
-set [negative v] effect to (0)
-</pre><p>Another workaround is to loop through each graphic effect:</p><pre class="blocks">for each ((effect)::list) in (list[color][saturation][brightness][ghost][fisheye][whirl][pixelate][mosaic][negative]@delInput@addInput::list) {
-run ({set [ v] effect to (0)} @addInput) with inputs (effect) @delInput @addInput::control
-} @loopArrow::list
-</pre><h2><span class="mw-headline" id="See_Also">See Also</span></h2><ul><li><a href="https://snapwiki.miraheze.org/wiki/Change_()_effect_by_()_(block)?action=edit&amp;redlink=1" class="new" title="Change () effect by () (block) (page does not exist)">change () effect by ()</a></li><li><a href="https://snapwiki.miraheze.org/wiki/Set_()_effect_to_()_(block)?action=edit&amp;redlink=1" class="new" title="Set () effect to () (block) (page does not exist)">set () effect to ()</a></li><li><a href="https://snapwiki.miraheze.org/wiki/()_effect_(block)?action=edit&amp;redlink=1" class="new" title="() effect (block) (page does not exist)">() effect</a></li></ul></div>
+Your request is not compliant with our user agent policy. Please modify your UA, so we have a way to contact you. Default user agents from popular/default software packages are not permitted.
